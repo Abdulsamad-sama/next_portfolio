@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { useState, useRef } from "react";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const links = [
   {
@@ -38,7 +40,8 @@ const links = [
   },
 ];
 
-const header = () => {
+const Header = () => {
+  const session = useSession();
   return (
     <div className="flex justify-between h-23 items-center">
       <div>
@@ -54,16 +57,18 @@ const header = () => {
             {link.title}
           </Link>
         ))}
-        <button
-          type="button"
-          onClick={console.log("logout")}
-          className="bg-[#53c2ab] p-1 rounded text-black cursor-pointer"
-        >
-          LogOut
-        </button>
+        {session.status === "authenticated" && (
+          <button
+            type="button"
+            onClick={signOut}
+            className="bg-[#53c2ab] p-1 rounded text-black cursor-pointer"
+          >
+            LogOut
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
-export default header;
+export default Header;

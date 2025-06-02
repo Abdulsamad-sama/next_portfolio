@@ -20,7 +20,7 @@ const blog = async () => {
   return (
     <div className="flex flex-col gap-9 mt-10">
       {data.map((item) => (
-        <Link key={item.id} href={`/blog/${item._id}`} className="flex gap-7">
+        <Link key={item._id} href={`/blog/${item._id}`} className="flex gap-7">
           <div className=" h-[250]  w-[250] relative ">
             <Image
               src={item.img}

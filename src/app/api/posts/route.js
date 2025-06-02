@@ -16,3 +16,17 @@ export const GET = async (request) => {
     return new NextResponse("failed", { status: 500 });
   }
 };
+
+export const POST = async (request) => {
+  try {
+    await connect();
+
+    const body = await request.json();
+    const newPost = new Post(body);
+    await newPost.save();
+
+    return new NextResponse("Post created successfully", { status: 201 });
+  } catch (error) {
+    return new NextResponse("failed", { status: 500 });
+  }
+};

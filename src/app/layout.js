@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { AuthProvider } from "./../components/sessionProvider/authprovider";
 
 const roboto = Roboto({ subsets: ["latin"] });
 
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`h-screen ${roboto.className}`}>
         <ThemeProvider>
-          <div className="px-24 flex justify-between flex-col h-full max-w-[1366px]">
-            <Header />
-            {children}
-            <Footer />
-          </div>
+          <AuthProvider>
+            <div className="px-24 flex justify-between flex-col min-h-full max-w-[1366px]">
+              <Header />
+              {children}
+              <Footer />
+            </div>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
