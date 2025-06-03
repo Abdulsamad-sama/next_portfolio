@@ -5,10 +5,12 @@ import React from "react";
 const portfolio = () => {
   return (
     <div className="relative font-extrabold">
-      <h2 className="text-4xl font-extrabold mb-6">Choose a gallery</h2>
+      <h2 className=" text-2xl md:text-4xl font-extrabold mb-4 ">
+        Choose a gallery
+      </h2>
 
-      <div className="flex gap-6">
-        <Link href={"/portfolio/websites"} className=" relative h-[350] w-75 ">
+      <div className="flex flex-col  items-center justify-evenly md:flex-row  gap-5">
+        <Link href={"/portfolio/websites"} className=" relative h-[330] w-75 ">
           <Image
             src={"/web.jpg"}
             fill={true}
@@ -20,7 +22,7 @@ const portfolio = () => {
           </p>
         </Link>
 
-        <Link href={"/portfolio/ai-agent"} className=" relative h-[350] w-75">
+        <Link href={"/portfolio/ai-agent"} className=" relative h-[330] w-75">
           <Image
             src={"/ai.jpg"}
             fill={true}
@@ -32,7 +34,7 @@ const portfolio = () => {
           </p>
         </Link>
 
-        <Link href={"/portfolio/saas"} className=" relative h-[350] w-75">
+        <Link href={"/portfolio/saas"} className=" relative h-[330] w-75">
           <Image
             src={"/saas.jpg"}
             fill={true}

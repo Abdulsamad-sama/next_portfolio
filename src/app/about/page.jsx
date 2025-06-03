@@ -5,13 +5,13 @@ import React from "react";
 const about = () => {
   return (
     <div className="flex flex-col gap-3 relative">
-      {/* hero */}
-      <div className=" h-[320px] relative mb-4">
+      {/*  hero */}
+      <div className="h-[320px] relative mb-4">
         <Image
-          src={"/seo.jpg"}
+          src="/abdulsamad_ghibli.png"
           alt="About"
           fill={true}
-          className=" object-cover grayscale-100"
+          className="object-cover object-center  grayscale-100"
         />
 
         <div className="absolute bottom-3 left-4 bg-[#53c2ab] p-3 rounded-md">
@@ -25,36 +25,52 @@ const about = () => {
         </div>
       </div>
       {/* text */}
-      <div className="flex gap-2">
-        <div className="flex-1">
+      <div className="flex flex-col md:flex-row gap-2">
+        <div className="flex-1 mr-2">
           <h2 className="text-2xl font-bold mb-5">Who we are.</h2>
           <p className="mb-3 text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            aliquid quod nisi fugit facere ad, adipisci sed rem, eveniet
-            quisquam beatae mollitia at architecto eaque voluptatem numquam!
-            Officia, repellat amet necessitatibus quia, cum fugiat alias
-            distinctio at quos nulla eligendi magnam, commodi saepe nemo autem
-            <br />
-            <br />
-            numquam quas deserunt ex culpa vel error nisi. Itaque tenetur facere
-            nisi enim, voluptatibus illo quasi hic dolores nostrum harum
+            We are a passionate and purpose-driven software development practice
+            led by Abdulsamad Hamzat, a developer committed to delivering clean,
+            efficient, and impactful technology solutions. With a background in
+            Computer Engineering and hands-on experience in both technical
+            training and software development, we combine deep technical skills
+            with a strong focus on collaboration, problem-solving, and
+            user-centered design. We believe in continuous learning, knowledge
+            sharing, and building tools that solve real-world problems. Whether
+            it's leading peer tutorials, training professionals on productivity
+            software, or contributing to community projects, we approach every
+            challenge with integrity, curiosity, and a commitment to excellence.
           </p>
         </div>
         <div className="flex-1">
           <h2 className="text-2xl font-bold mb-5">What we do.</h2>
           <p className="mb-3 text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            aliquid quod nisi fugit facere ad, adipisci sed rem, eveniet
-            quisquam beatae mollitia at architecto eaque voluptatem numquam!
-            Officia, repellat amet necessitatibus quia, cum fugiat alias
-            distinctio at quos nulla eligendi magnam, commodi saepe nemo autem
-            numquam quas deserunt ex culpa vel error nisi. Itaque tenetur facere
-            nisi enim, voluptatibus illo quasi hic dolores nostrum harum eos
-            aut, eum dolorum consequuntur. Vel perspiciatis mollitia optio ab
-            molestiae iste ipsa voluptatibus! Temporibus sapiente necessitatibus
-            voluptatum dignissimos provident, expedita harum nostrum aliquid
-            iste sint cum dolores facilis vitae repudiandae quas esse, in non?
+            We design and build scalable, user-friendly software solutions
+            tailored to individual, academic, and business needs. <br />
+            Our work spans:
           </p>
+          <ul className="list-disc list-inside mb-3 text-justify">
+            <li>
+              Full-Stack Web Development using JavaScript, Node.js,React, and
+              Next.js
+            </li>
+            <li className="mt-2">
+              Custom Software Training & Consulting in Microsoft Office tools
+              for improved productivity
+            </li>
+            <li>
+              Technical Prototyping & Visual Processing using tools like MATLAB
+              and Python
+            </li>
+            <li>
+              Community Learning through mentorship, academic tutorials, and
+              peer support
+            </li>
+            <li>
+              Open Source Contributions and freelance collaboration on
+              client-centered projects
+            </li>
+          </ul>
           <Button btnName={"Contact"} btnUrl={"/contact"} />
         </div>
       </div>

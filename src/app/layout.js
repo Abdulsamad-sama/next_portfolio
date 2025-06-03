@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`h-screen ${roboto.className}`}>
         <ThemeProvider>
           <AuthProvider>
-            <div className="px-24 flex justify-between flex-col min-h-full max-w-[1366px]">
+            <div className=" px-[2rem] flex justify-between flex-col min-h-screen max-w-[1366px]">
               <Header />
               {children}
               <Footer />
