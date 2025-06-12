@@ -18,7 +18,7 @@ const getData = async (id) => {
 const blogPost = async ({ params }) => {
   const data = await getData(params.id);
   return (
-    <div>
+    <div className="mt-16">
       <div className="flex ">
         <div className=" flex flex-col flex-1 space-y-5">
           <h1 className="text-3xl font-extrabold">{data.title}</h1>

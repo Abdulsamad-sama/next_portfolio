@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import { signOut } from "next-auth/react";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { IoClose } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const links = [
   {
@@ -44,8 +43,10 @@ const links = [
 
 const Header = () => {
   const session = useSession();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(false);
 
   // This effect handles closing the mobile menu when clicking outside of it
   useEffect(() => {
@@ -59,9 +60,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex justify-between h-14 items-center">
+    <div className=" fixed top-0 left-0 w-full flex justify-between z-50 items-center px-8 py-2">
       <div>
-        <Link href="/" className="text-lg font-extrabold">
+        <Link href="/" className="text-xl font-extrabold">
           Abdulsamad
         </Link>
       </div>
@@ -72,7 +73,15 @@ const Header = () => {
         {/* Navigation Links */}
         <div className="hidden md:flex gap-3">
           {links.map((link) => (
-            <Link key={link.id} href={link.url} className="p-2 ">
+            <Link
+              key={link.id}
+              href={link.url}
+              className={`p-2 ${
+                pathname === link.url
+                  ? "text-[#53c2ab] font-extrabold underline"
+                  : ""
+              } `}
+            >
               {link.title}
             </Link>
           ))}
@@ -83,7 +92,7 @@ const Header = () => {
           ref={menuRef}
           className={`${
             isMenuOpen ? "flex" : "hidden"
-          } flex-col items-center absolute top-18 right-5 bg-gray-800 w-25 text-white shadow-md md:hidden `}
+          } flex-col items-center absolute z-50 top-18 right-5 bg-gray-800 w-25 text-white shadow-md md:hidden `}
         >
           {links.map((link) => (
             <Link

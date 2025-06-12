@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/buttons/Button";
+import { Button } from "@/components/buttons/Button";
 import Image from "next/image";
 import React from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
@@ -31,7 +31,7 @@ const contact = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col gap-3 mt-16 relative">
       <h1 className="text-4xl font-bold text-center mb-6">
         Get in touch with us
       </h1>
@@ -115,7 +115,7 @@ const contact = () => {
             required
           />
 
-          <Button btnName={"Send To mail"} btnUrl={"#"} type="submit" />
+          <Button btnName={"Email me"} btnUrl={"#"} type="submit" />
         </form>
       </div>
     </div>

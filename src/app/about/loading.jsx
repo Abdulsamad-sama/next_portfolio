@@ -7,7 +7,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="w-full flex justify-center items-center h-40">
+    <div className="fixed inset-0 flex justify-center items-center pointer-events-none z-50">
       <h1 className="text-8xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:200%_100%] bg-clip-text text-transparent animate-gradient-move">
         Abdulsamad
       </h1>

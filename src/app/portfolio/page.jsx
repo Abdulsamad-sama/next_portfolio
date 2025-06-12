@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Abdulsamad Hamzat | Porftfolio",
+  description:
+    "Personal Projects and portfolio showcasing my work as a software engineer and web developer.",
+};
+
 const portfolio = () => {
   return (
     <div className="relative font-extrabold">

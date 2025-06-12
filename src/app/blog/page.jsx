@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Abdulsamad Hamzat | Blog",
+  description: "Latest insights and project updates.",
+};
+
 const getData = async () => {
   const res = await fetch("http://localhost:3000/api/posts", {
     method: "GET",
@@ -18,7 +23,7 @@ const getData = async () => {
 const blog = async () => {
   const data = await getData();
   return (
-    <div className="flex flex-col gap-9 mt-10">
+    <div className="flex flex-col gap-9 mt-16">
       {data.map((item) => (
         <Link key={item._id} href={`/blog/${item._id}`} className="flex gap-7">
           <div className=" h-[250]  w-[250] relative ">

@@ -2,6 +2,12 @@
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
+
+<head>
+  <title>DashBoard</title>
+  <meta name="description" content="A dashboard to add blog post" />
+</head>;
 
 const dashboard = () => {
   const session = useSession();
@@ -45,7 +51,7 @@ const dashboard = () => {
 
   if (session.status === "authenticated") {
     return (
-      <div className="flex gap-10 justify-center items-center">
+      <div className="flex gap-10 justify-center mt-16 items-center">
         <div className="flex-1 flex flex-col">
           <h1 className="text-2xl font-bold text-center mb-10">
             Welcome to the Dashboard

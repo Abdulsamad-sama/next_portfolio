@@ -1,6 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import Head from "next/head";
+
+<head>
+  <title>Login | Abdulsamad Hamzat</title>
+  <meta name="description" content="A dashboard to add blog post" />
+</head>;
 
 const register = () => {
   const [err, setErr] = useState(false);

@@ -9,8 +9,9 @@ const roboto = Roboto({ subsets: ["latin"] });
 
 //#53c2ab
 export const metadata = {
-  title: "Abdulsamad",
-  description: "hamzat abdulsamad eniola portfolio",
+  title: "Abdulsamad Hamzat | Software Engineer & Web Developer",
+  description:
+    "Software engineer specializing in building modern web apps with React, Node.js, and Python. View my projects and get in touch.",
 };
 
 export default function RootLayout({ children }) {
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`h-screen ${roboto.className}`}>
         <ThemeProvider>
           <AuthProvider>
-            <div className=" px-[2rem] flex justify-between flex-col min-h-screen max-w-[1366px]">
+            <div className="px-7 flex justify-between flex-col min-h-screen mx-auto max-w-9xl">
               <Header />
               {children}
               <Footer />

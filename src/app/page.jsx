@@ -1,10 +1,10 @@
-import Button from "@/components/buttons/Button";
+import { Button, AnchorTag } from "@/components/buttons/Button";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center gap-7 px-4 md:px-12 py-8">
-      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+    <div className="flex flex-col-reverse sm:flex-row items-center gap-7 px-4 md:px-12 py-8 mt-16">
+      <main className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#53c2ab] to-[#bbb] text-transparent bg-clip-text">
           Hi, I’m Abdulsamad
         </h1>
@@ -18,7 +18,9 @@ export default function Home() {
           experiences. Currently, I’m focused on building accessible,
           human-centered products at Upstatement.
         </p>
-        <Button btnName={"See my works"} btnUrl={"/portfolio"} />
+
+        <AnchorTag btnName={"See My Works"} btnUrl={"/portfolio"} />
+
         <a
           href="/Abdulsamad_Hamzat_CV.pdf"
           download
@@ -26,7 +28,7 @@ export default function Home() {
         >
           Download CV
         </a>
-      </div>
+      </main>
       <div className="w-full md:w-1/2 flex justify-center">
         <div className="relative h-48 w-48 sm:h-64 sm:w-64 md:h-[400px] md:w-80">
           <Image

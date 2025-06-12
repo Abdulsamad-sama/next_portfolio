@@ -1,15 +1,20 @@
-import Button from "@/components/buttons/Button";
+import { Button } from "@/components/buttons/Button";
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "Abdulsamad Hamzat | Porftfolio",
+  description: "About Abdulsamad Hamzat.",
+};
+
 const about = () => {
   return (
-    <div className="flex flex-col gap-3 relative">
+    <div className="flex flex-col gap-3 mt-16 relative">
       {/*  hero */}
       <div className="h-[320px] relative mb-4">
         <Image
           src="/abdulsamad_ghibli.png"
-          alt="About"
+          alt="About Abdulsamad Hamzat"
           fill={true}
           className="object-cover object-center  grayscale-100"
         />
@@ -25,8 +30,8 @@ const about = () => {
         </div>
       </div>
       {/* text */}
-      <div className="flex flex-col md:flex-row gap-2">
-        <div className="flex-1 mr-2">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex-1 md:border-r-2 pr-4">
           <h2 className="text-2xl font-bold mb-5">Who we are.</h2>
           <p className="mb-3 text-justify">
             We are a passionate and purpose-driven software development practice

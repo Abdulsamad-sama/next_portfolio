@@ -8,7 +8,7 @@ const date = Dates.getFullYear();
 
 const footer = () => {
   return (
-    <div className="h-12 flex items-center justify-between bg-[#0d1117] text-white px-2">
+    <div className="text-sm md:text-lg h-12 flex flex-col sm:flex-row  items-center justify-between px-2">
       {`@${date}. Tomio, All right researved`}
       <div className=" space-x-4">
         <a
