@@ -13,7 +13,7 @@ const about = () => {
       {/*  hero */}
       <div className="h-[320px] relative mb-4">
         <Image
-          src="/abdulsamad_ghibli.png"
+          src={"/abdulsamad_ghibli.png"}
           alt="About Abdulsamad Hamzat"
           fill={true}
           className="object-cover object-center  grayscale-100"

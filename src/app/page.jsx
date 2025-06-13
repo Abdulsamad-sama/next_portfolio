@@ -34,7 +34,7 @@ export default function Home() {
           <Image
             fill={true}
             alt="HomePIc"
-            src="/abdulsamad.jpg"
+            src={"/abdulsamad.jpg"}
             className="animate-pulse object-contain"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
