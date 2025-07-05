@@ -32,11 +32,11 @@ export default function Home() {
       <div className="w-full md:w-1/2 flex justify-center">
         <div className="relative h-48 w-48 sm:h-64 sm:w-64 md:h-[400px] md:w-80">
           <Image
+            src={"/abdulsamad.jpg"}
             fill={true}
             alt="HomePIc"
-            src={"/abdulsamad.jpg"}
             className="animate-pulse object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            // sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </div>

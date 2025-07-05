@@ -20,7 +20,7 @@ const portfolio = () => {
           <Image
             src={"/web.jpg"}
             fill={true}
-            alt="Websites"
+            alt="Portfolio/Websites"
             className="object-cover peer"
           />
           <p className="absolute bottom-3 right-3 text-2xl peer-hover:text-[#53c2ab]">
@@ -32,7 +32,7 @@ const portfolio = () => {
           <Image
             src={"/ai.jpg"}
             fill={true}
-            alt="AI Agent"
+            alt="Portfolio/AI Agent"
             className="object-cover peer"
           />
           <p className="absolute bottom-3 right-3 text-2xl peer-hover:text-[#53c2ab]">
@@ -44,7 +44,7 @@ const portfolio = () => {
           <Image
             src={"/saas.jpg"}
             fill={true}
-            alt="SAAS"
+            alt="Portfolio/SAAS"
             className="object-cover peer"
           />
           <p className="absolute bottom-3 right-3 text-2xl peer-hover:text-[#53c2ab]">
