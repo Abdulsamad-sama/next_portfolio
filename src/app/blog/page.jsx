@@ -1,6 +1,9 @@
+import { revalidatePath } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const dynamic = "force-dynamic";
 
 // SEO Metadata
 export const metadata = {
@@ -15,13 +18,13 @@ const getData = async () => {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
     const res = await fetch(`${baseUrl}/api/posts`, {
       method: "GET",
-      cache: "no-store",
+      next:{ revalidate: 60},
     });
 
     if (!res.ok) throw new Error("Failed to fetch data");
 
     return res.json();
-    
+
   } catch (error) {
     console.error("Error fetching data:", error);
     return null;
