@@ -47,6 +47,8 @@ const Header = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const SCROLL_THRESHOLD = 50;
 
   // This effect handles closing the mobile menu when clicking outside of it
   useEffect(() => {
@@ -59,8 +61,26 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
+    };
+
+    // set initial state
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className=" fixed top-0 left-0 w-full flex justify-between z-50 items-center px-8 py-2">
+    <div
+      className={` fixed top-0 left-0 w-full flex justify-between z-50 items-center px-8 py-2 duration-300 transition-all ease-in-out ${
+        isScrolled
+          ? "backdrop-blur-xl shadow-2xl" // Solid color when scrolled
+          : "bg-transparent backdrop-blur-sm" // Transparent when at the top
+      }`}
+    >
       <div>
         <Link href="/" className="text-xl font-extrabold">
           Abdulsamad
