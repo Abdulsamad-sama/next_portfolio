@@ -3,6 +3,7 @@ import { Button, AnchorTag } from "@/components/buttons/Button";
 import Image from "next/image";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const typedElementRef = useRef(null);
@@ -59,7 +60,7 @@ export default function Home() {
             <Image
               src={"/abdulsamad.jpg"}
               fill={true}
-              alt="HomePIc"
+              alt="A picture of Abdulsamad Hamzat"
               className=" absolute animate-pulse object-cover rounded-2xl "
               // sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -132,23 +133,66 @@ export default function Home() {
         </h2>
 
         <div className="flex flex-col gap-6">
-          <div className="flex-1 border p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="" alt="" srcset="" />
+          <Link
+            className="flex justify-between items-center peer transition-hover duration-300 mb-10"
+            href={"https://leaves-rake-39990396.figma.site/"}
+          >
+            <Image
+              src={"/Pumpmas.png"}
+              alt="Pumpmas"
+              width={550}
+              height={500}
+              className=""
+            />
             <div>
-              <h3 className="text-xl font-bold mb-2">Project One</h3>
+              <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
+                Pumpmas
+              </h3>
+              <p className="text-justify">A web application for a memecoin</p>
+            </div>
+          </Link>
+          <Link
+            className="flex flex-row-reverse justify-between items-center peer transition-hover duration-300 mb-10"
+            href={"https://peer-beam-v01.vercel.app/"}
+          >
+            <Image
+              src={"/peerBeam.png"}
+              alt="peerBeam"
+              width={550}
+              height={500}
+              className="ml-4"
+            />
+            <div>
+              <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
+                PeerBeam
+              </h3>
               <p className="text-justify">
-                A web application that allows users to track their tasks and
-                manage projects efficiently. Built with React and Node.js.
+                A peer-to-peer file transfer web app powered by Socket.IO, with
+                zero internet dependency after initial connection. Just scan,
+                connect, and share — works in all browsers...
               </p>
             </div>
-          </div>
-          <div className="flex-1 border p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold mb-2">Project Two</h3>
-            <p className="text-justify">
-              An e-commerce platform designed for small businesses to sell
-              products online. Developed using Next.js and MongoDB.
-            </p>
-          </div>
+          </Link>
+          <Link
+            className="flex justify-between items-center peer transition-hover duration-300 mb-10"
+            href={"https://leaves-rake-39990396.figma.site/"}
+          >
+            <Image
+              src={"/codeham_charity.png"}
+              alt="Codeham Charity"
+              width={550}
+              height={500}
+              className=""
+            />
+            <div>
+              <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
+                Codeham Charity
+              </h3>
+              <p className="text-justify">
+                Worldwide non-profit charity organization
+              </p>
+            </div>
+          </Link>
         </div>
       </section>
     </div>
