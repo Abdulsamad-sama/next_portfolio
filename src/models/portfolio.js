@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
+import { type } from "os";
 
 const portfolioSchema = new Schema(
   {
@@ -11,7 +12,19 @@ const portfolioSchema = new Schema(
       type: String,
       required: true,
     },
+    cat: {
+      type: String,
+      required: false,
+    },
     img: {
+      type: String,
+      required: false,
+    },
+    video: {
+      type: String,
+      required: false,
+    },
+    link: {
       type: String,
       required: false,
     },

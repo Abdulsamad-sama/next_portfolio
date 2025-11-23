@@ -15,7 +15,7 @@ export const metadata = {
 // Fetch blog post data
 const getData = async () => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+    const baseUrl = "http://localhost:3000";
     const res = await fetch(`${baseUrl}/api/posts`, {
       method: "GET",
       next:{ revalidate: 60},
