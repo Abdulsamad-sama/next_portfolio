@@ -77,7 +77,7 @@ const Header = () => {
     <div
       className={` fixed top-0 left-0 w-full flex justify-between z-50 items-center px-8 py-2 duration-300 transition-all ease-in-out ${
         isScrolled
-          ? "backdrop-blur-xl shadow-2xl" // Solid color when scrolled
+          ? "backdrop-blur-3xl bg-blend-difference shadow-2xl" // Solid color when scrolled
           : "bg-transparent backdrop-blur-sm" // Transparent when at the top
       }`}
     >
@@ -89,7 +89,10 @@ const Header = () => {
 
       <div className="flex gap-3 items-center">
         {/* Theme Toggle */}
-        <ThemeToggle />
+        <span className="hidden">
+          <ThemeToggle />
+        </span>
+
         {/* Navigation Links */}
         <div className="hidden md:flex gap-3">
           {links.map((link) => (
@@ -112,13 +115,13 @@ const Header = () => {
           ref={menuRef}
           className={`${
             isMenuOpen ? "flex" : "hidden"
-          } flex-col items-center absolute z-50 top-18 right-5 bg-gray-800 w-25 text-white shadow-md md:hidden `}
+          } flex-col items-center absolute z-50 top-15 right-5 rounded-2xl p-4 backdrop-blur-3xl w-45 text-[#53c2ab] bg-gray-900 shadow-md md:hidden `}
         >
           {links.map((link) => (
             <Link
               key={link.id}
               href={link.url}
-              className="pb-3 text-center border-b-2 border-b-white hover:bg-gray-200"
+              className="mb-3 text-center border-b-2 border-b-white hover:bg-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.title}

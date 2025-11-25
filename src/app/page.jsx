@@ -21,6 +21,8 @@ const techStack = [
   "Figma",
   "Python",
   "MATLAB",
+  "Microsoft Office",
+  "Agentic AI",
 ];
 
 export default function Home() {
@@ -29,7 +31,11 @@ export default function Home() {
   useEffect(() => {
     if (typedElementRef.current) {
       const typed = new Typed(typedElementRef.current, {
-        strings: ["A Software Developer", "A Computer Engineerer"],
+        strings: [
+          "A Software Developer",
+          "A Computer Engineer",
+          "A Tech Enthusiast",
+        ],
         typeSpeed: 50,
         loop: true,
       });
@@ -43,15 +49,15 @@ export default function Home() {
   return (
     <div className="mt-16">
       <div className="flex flex-col-reverse sm:flex-row items-center gap-7 px-4 md:px-12 py-8">
-        <main className="w-full md:w-1/2 flex flex-col text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl text-left md:text-5xl font-extrabold bg-gradient-to-r from-[#53c2ab] to-[#bbb] text-transparent bg-clip-text">
+        <main className="w-full md:w-1/2 flex flex-col text-center md:text-left gap-2">
+          <h1 className="text-3xl sm:text-4xl text-nowrap text-left md:text-5xl font-extrabold bg-gradient-to-r from-[#53c2ab] to-[#bbb] text-transparent bg-clip-text mr-1.5">
             <span className="lg:inline block">Hi,</span> I’m Abdulsamad
           </h1>
 
-          <div>
+          <div className="text-left">
             <span
               ref={typedElementRef}
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-left text-[#53c2ab] mt-2"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-nowrap text-[#53c2ab] mt-2"
             ></span>
           </div>
 
@@ -83,12 +89,12 @@ export default function Home() {
           </a>
         </main>
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative shadow-md shadow-gray-400 rounded-4xl z-50 overflow-hidden">
+          <div className="relative shadow-md shadow-gray-400 rounded-full overflow-hidden">
             <Image
               src={"/abdulsamad.jpg"}
               // fill={true}
               width={450}
-              height={450}
+              height={200}
               alt="A picture of Abdulsamad Hamzat"
               className=" animate-pulse object-cover"
               // sizes="(max-width: 768px) 100vw, 50vw"
@@ -159,7 +165,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-6">
           <Link
-            className="flex flex-col md:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
+            className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://leaves-rake-39990396.figma.site/"}
           >
             <Image
@@ -173,7 +179,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
                 Pumpmas - Decentralized Finance &#40;DeFi&#41; Web Apps
               </h3>
-              <p className="text-justify">
+              <p className="text-left">
                 Built for a memecoin on the Ethereum &#40;ETH&#41; blockchain.
                 This project highlights proficiency in presenting tokenomics,
                 community links, and roadmap information for decentralized
@@ -182,7 +188,7 @@ export default function Home() {
             </div>
           </Link>
           <Link
-            className="flex flex-col md:flex-row-reverse gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
+            className="flex flex-col lg:flex-row-reverse gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://peer-beam-v01.vercel.app/"}
           >
             <Image
@@ -196,7 +202,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
                 PeerBeam
               </h3>
-              <p className="text-justify">
+              <p className="text-left">
                 PeerBeam is a modern, real-time file transfer web application
                 designed to facilitate quick and secure sharing of files between
                 users.
@@ -204,7 +210,7 @@ export default function Home() {
             </div>
           </Link>
           <Link
-            className="flex flex-col md:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
+            className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://code-ham-charity.vercel.app/index.html"}
           >
             <Image
@@ -218,7 +224,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
                 Codeham Charity
               </h3>
-              <p className="text-justify">
+              <p className="text-left">
                 A comprehensive, feature-rich website developed for CodeHam
                 Charity, a non-governmental organization focused on facilitating
                 donations, awareness, and community engagement.
@@ -227,7 +233,7 @@ export default function Home() {
           </Link>
 
           <Link
-            className="flex flex-col md:flex-row-reverse gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
+            className="flex flex-col lg:flex-row-reverse gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://gladtidingsclone.vercel.app/"}
           >
             <Image
@@ -241,7 +247,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
                 Gladtidings
               </h3>
-              <p className="text-justify">
+              <p className="text-left">
                 A landing page clone demonstrating strong front-end replication
                 and design skills, specifically modeling a commercial website
                 focused on selling data services.
@@ -250,7 +256,7 @@ export default function Home() {
           </Link>
 
           <Link
-            className="flex flex-col md:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
+            className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://tomiotoken.netlify.app/"}
           >
             <Image
@@ -264,7 +270,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
                 The Tomio
               </h3>
-              <p className="text-justify">
+              <p className="text-left">
                 Built for a memecoin on the Solana &#40;SOL&#41; blockchain.
                 This app demonstrates adaptability to different blockchain
                 ecosystems and knowledge of presenting key token data relevant

@@ -13,7 +13,7 @@ const ThemeToggle = () => {
       <div className="text-[12px]">🌙</div>
       <div className="text-[12px]">🔆</div>
       <div
-        className={`h-4 w-4 absolute rounded-full bg-[#53c2ab] ${
+        className={`h-4 w-4 absolute rounded-full bg-gray-200 ${
           mode === "dark" ? "right-[3px]" : "left-[3px]"
         }`}
       ></div>
