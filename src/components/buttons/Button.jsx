@@ -15,7 +15,7 @@ export const Button = ({ btnName, btnUrl, type }) => {
   }
   return (
     <Link href={btnUrl}>
-      <button className="p-3 bg-[#53c2ab] rounded text-black cursor-pointer border-none w-max ">
+      <button className="mt-4 inline-block text-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500/50 transition duration-300 ease-in-out w-full sm:w-auto transform hover:scale-[1.02]">
         {`${btnName}`}
       </button>
     </Link>
@@ -26,7 +26,7 @@ export const AnchorTag = ({ btnName, btnUrl }) => {
   return (
     <a
       href={btnUrl}
-      className="active:bg-transparent p-3 bg-[#53c2ab] rounded text-black cursor-pointer border-none w-max "
+      className="mt-4 inline-block text-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500/50 transition duration-300 ease-in-out w-full sm:w-auto transform hover:scale-[1.02]"
     >
       {btnName}
     </a>

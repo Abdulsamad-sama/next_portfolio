@@ -50,7 +50,7 @@ export default function Home() {
     <div className="mt-16">
       <div className="flex flex-col-reverse sm:flex-row items-center gap-7 px-4 md:px-12 py-8">
         <main className="w-full md:w-1/2 flex flex-col text-center md:text-left gap-2">
-          <h1 className="text-3xl sm:text-4xl text-nowrap text-left md:text-5xl font-extrabold bg-gradient-to-r from-[#53c2ab] to-[#bbb] text-transparent bg-clip-text mr-1.5">
+          <h1 className="text-3xl sm:text-4xl text-nowrap text-left md:text-5xl font-extrabold bg-gradient-to-r from-[#53c2ab] to-indigo-300 text-transparent bg-clip-text mr-1.5">
             <span className="lg:inline block">Hi,</span> I’m Abdulsamad
           </h1>
 
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio */}
+      {/* -------------------Portfolio------------------ */}
       <section className="mt-20 mb-10 px-4 md:px-12 py-8 bg-gray-900">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-left text-[#53c2ab] mb-8">
           Projects
@@ -179,7 +179,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
                 Pumpmas - Decentralized Finance &#40;DeFi&#41; Web Apps
               </h3>
-              <p className="text-left">
+              <p className="text-left  border-l-4 border-indigo-500">
                 Built for a memecoin on the Ethereum &#40;ETH&#41; blockchain.
                 This project highlights proficiency in presenting tokenomics,
                 community links, and roadmap information for decentralized
@@ -193,7 +193,7 @@ export default function Home() {
           >
             <Image
               src={"/peerBeam.png"}
-              alt="peerBeam"
+              alt="PeerBeam"
               width={550}
               height={500}
               className="flex-1/2 ml-4"
