@@ -162,8 +162,9 @@ export default function Home() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-left text-[#53c2ab] mb-8">
           Projects
         </h2>
-
+        {/*Portfolio card  */}
         <div className="flex flex-col gap-6">
+        {/* Card 1 */}
           <Link
             className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://leaves-rake-39990396.figma.site/"}
@@ -187,6 +188,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
+          {/* card 2 */}
           <Link
             className="flex flex-col lg:flex-row-reverse gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://peer-beam-v01.vercel.app/"}
@@ -209,6 +211,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
+          {/* Card 3 */}
           <Link
             className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://code-ham-charity.vercel.app/index.html"}
@@ -231,7 +234,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
-
+          {/* Card 4 */}
           <Link
             className="flex flex-col lg:flex-row-reverse gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://gladtidingsclone.vercel.app/"}
@@ -254,7 +257,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
-
+          {/* Card 5 */}
           <Link
             className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
             href={"https://tomiotoken.netlify.app/"}
@@ -275,6 +278,27 @@ export default function Home() {
                 This app demonstrates adaptability to different blockchain
                 ecosystems and knowledge of presenting key token data relevant
                 to the high-speed Solana network.
+              </p>
+            </div>
+          </Link>
+          {/* Card 6 */}
+           <Link
+            className="flex flex-col lg:flex-row gap-8 justify-between items-center peer transition-hover duration-300 p-2 mb-20"
+            href={"https://mspaintify.vercel.app/"}
+          >
+            <Image
+              src={"/the_tomio.png"}
+              alt="MSPAINTIFY"
+              width={550}
+              height={500}
+              className="flex-1/2 "
+            />
+            <div className="flex-1/2 self-start md:text-left pl-8">
+              <h3 className="text-2xl font-bold mb-2 text-[#53c2ab] peer-hover:underline">
+                MSPAINTIFY
+              </h3>
+              <p className="text-left">
+                A flashy crypto token landing page with an integrated AI image generator built with Next.js, Tailwind CSS, and OpenAI..
               </p>
             </div>
           </Link>
