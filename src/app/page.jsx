@@ -287,7 +287,7 @@ export default function Home() {
             href={"https://mspaintify.vercel.app/"}
           >
             <Image
-              src={"/the_tomio.png"}
+              src={"/mspaintify-vercel-app.png"}
               alt="MSPAINTIFY"
               width={550}
               height={500}
